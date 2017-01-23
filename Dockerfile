@@ -23,6 +23,7 @@ RUN apt-get update && \
     mv piwigo/* /var/www/html && \
     chown -R www-data:www-data /var/www/html && \
     rm -r piwigo* && \
+	chmod +x /apache.sh && \
     rm /var/www/html/index.html
 
 VOLUME ["/var/www/html/galleries", "/var/www/html/themes", "/var/www/html/plugins", "/var/www/html/local"]
